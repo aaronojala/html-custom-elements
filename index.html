@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <greeter-elem name="Doe"></greeter-elem>
+    <greeter-elem name="John"></greeter-elem>
+    <greeter-elem name="Jane"></greeter-elem>
+    <script>
+      class Greeter extends HTMLElement {
+        constructor() {
+          super();
+        }
+
+        attributeChangedCallback(attrName, old, newVal) {
+          if (attrName == "name") {
+            this.innerHTML = `<h3>Hello, ${newVal}</h3>`;
+          }
+        }
+
+        static get observedAttributes() {
+          return ["name"];
+        }
+      }
+      customElements.define("greeter-elem", Greeter);
+    </script>
+  </body>
+</html>

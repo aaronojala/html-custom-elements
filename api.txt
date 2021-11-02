@@ -1,0 +1,13 @@
+1. REST API: Explain in your own words
+a. what does it mean and how does it work
+b. differences of GET / POST verbs
+
+a. 
+REST API is a design pattern for APIs. When the REST API is called it will transfer a 
+representation of the state of the requested resource. Usually this state representation is in a JSON format
+cant also be in other formats. When a client calls the server with an API, this is influenced by the endpoint and 
+HTTP method. The most common HTTP methods are GET, POST, PUT and DELETE. 
+
+b. GET verb indicates that we want to get the state of the object we are requesting. For example if we would go to
+a certain users Facebook profile we would GET the state of that user. GET request is only used to request data.
+POST method on the other hand can send data to the server. This data can be used to create or update. 
